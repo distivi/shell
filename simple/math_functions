@@ -1,0 +1,13 @@
+ x=7 y=2
+
+    a=`expr $x + $y`   ; echo a=$a
+
+    a=`expr $a + 1`    ; echo a=$a
+
+    b=`expr $y - $x`   ; echo b=$b
+
+    c=`expr $x '*' $y` ; echo c=$c
+
+    d=`expr $x / $y`   ; echo d=$d
+
+    e=`expr $x % $y`   ; echo e=$e

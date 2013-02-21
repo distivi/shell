@@ -1,0 +1,9 @@
+> # redirect stream to [file] (ls -l > file1) will be create/recreate file1
+>> # redirect stream to and of [file] 
+< #redirect stream from file
+<< #redirect stream from terminal while not write right word. Example: $wc -l <<end
+|  # output from first command go to input to 2-nd command. Example: ls -l | wc -l
+command > /dev/console # outstream to console
+command > /dev/lp      # outstream to printer
+command >  /dev/null   # outstream to null
+file < /dev/null       # write null to file

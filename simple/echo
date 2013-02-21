@@ -1,0 +1,11 @@
+x=22 y=33 z=$x
+A="$x" B='$x' C=\$x
+D="$x + $y + $z"  E='$x + $y + $z'  F=$x\ +\ $y\ +\ $z
+
+echo A = $A   B = $B   C = $C
+echo D = $D   E = $E   F = $F
+eval echo evaluated A = $A
+eval echo evaluated B = $B
+eval echo evaluated C = $C
+
+var_date=`date`

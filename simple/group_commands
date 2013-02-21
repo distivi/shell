@@ -1,0 +1,14 @@
+;  # command1 ; command2 # com2 run after com2
+&  # async running com1  (find / -name conf -print &)
+	NOTES:
+	after running async proces will show its number
+	if you forgot process's number you can use command "ps"
+	after that use "kill -9 process_number"
+&& # run command2 after success comleting command1
+|| # run command2 after NOT success completing command1
+{} # use it to group commands. Example: {c1 ; c2} && c3
+() # use it to group commands by shell. Example: (cd ..; ls) ; ls
+		output:
+			/dir1/dir2
+			/dir1/dir2/dir3
+

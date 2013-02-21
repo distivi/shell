@@ -1,0 +1,27 @@
+cd
+pwd
+mkdir
+rmdir #remove empty dir
+rm #remove file
+mv #remane file1 to file2
+cp #copy file   example $cp /dir1/dir2/file1 /dir1/
+# rwxrwxrwx   mean:
+		r - read
+		w - write
+		x - run
+		1-st rwx for creator
+		2-nd rwx for group where exist creator
+		3-rd rwx for all users
+
+chmod [0-7][0-7][0-7] file
+		0: ---
+		1: --x
+		2: -w-
+		3: -wx
+		4: r--
+		5: r-x
+		6: rw-
+		7: rwx
+	or use [u/g/o/a][+/-][r/w/x]    or something like u=g 
+	also use "chmod 321 *" to change all files and
+	use "chmod -R 777 *" to change all files in subdir  to change all files in subdir 
