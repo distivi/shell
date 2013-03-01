@@ -1,0 +1,101 @@
+cycles
+for name in [list]
+    do
+        commands
+    done
+
+while 
+    do
+
+    done
+
+until ...
+do
+    ....
+done    
+
+$bash : script.sh 1 2
+indexes: 0        1 2
+Обращение к параметрам осуществляеться через индекс
+Пример: $1 - обращение кo второму параметру что передаеться в скрипт.
+$@ - ??????????????????
+
+export <name> = <value> // make system variable
+
+-------------functions----------------------
+testfunc()
+{
+    commands list
+}
+Example
+
+fn()
+{
+    echo $0 # func name
+ }
+
+fn 1 2 # func call
+
+--------------------Робота з рядками------------------------
+Осн. функции
+
+1) вхождение строки в подстроку
+`expr <index> $string_name $substring_name`
+    Example
+str1 = 'abcAbc123'
+str2 = 'abc'
+
+echo `expr index "$str1" "$str2"sh`
+
+2) substring
+`expr substr $str1 $position $length`
+
+-------------Работа с массивами--------------------------
+#! /bin/bash
+
+name[0] = "Zara"
+name[1] = "Ayan"
+name[2] = "Daisy"
+
+echo "Second ${name[1]}"
+echo "Second ${name[*]}" # all elements
+echo "Second ${name[@]}" # all elements
+
+---------------------Копирование файлов с ftp----------------------------
+#! /bin/bash
+USER = "user"
+PASS = "123"
+
+#ftp
+IP = 192.364.20
+BACKUP_DIR = "/tmp/pool/backup"
+LOCAL_DIR = "/tmp/pool/local"
+LOG_DIR = "./logs/"
+LOG_FILE = "ftp_log.log"
+CUTOFF=3
+CREATE_XML_COPIES = "false"
+
+function validateLOG
+{
+    if [!-d $LOG_DIR] #  !существует данная деректория
+    then # make such directory
+        mkdir $LOG_DIR 2>/dev/null
+    f
+    if [! -f ${LOG_DIR} ${LOGFILE}] # file exists
+        then
+        echo `date > ${LOG_DIR}${LOG_FILE}`
+    fi
+    }
+
+------------------Exercises---------------------------
+Написать скрипт которы выпоi=0
+while [ $i -lt 22 ]
+do
+  touch $i
+  i=$[$i+1]
+done
+лнял бы след. операции:
+-если не передано ни одного аргумента в скрипт,то скрипт проверял бы доступность 5 хостов при помощи ping и выводил результаты на экран, где каждая строка представляет собой запись следующего типа: 
+IP -flag(ok || failed)
+
+-если передано один параметр, то е:сть ip-adress, то скрипт открывает ssh доступ к данному адресу.Жц
